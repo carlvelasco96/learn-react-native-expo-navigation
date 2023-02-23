@@ -11,7 +11,9 @@ type Props = NativeStackScreenProps<RootStackParamList, "MealsCategories">;
 const CategoriesScreen = ({ navigation }: Props) => {
   function renderCategoryItem(itemData: ListRenderItemInfo<Category>) {
     function pressHandler() {
-      navigation.navigate("MealsOverview");
+      navigation.navigate("MealsOverview", {
+        categoryId: itemData.item.id,
+      });
     }
 
     return (
