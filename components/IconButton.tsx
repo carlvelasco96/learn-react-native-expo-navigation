@@ -16,7 +16,7 @@ const IconButton = ({
       onPress={onPress}
       style={({ pressed }) => pressed && styles.pressed}
     >
-      <Ionicons icon={icon} size={24} color={color} />
+      <Ionicons name={icon} size={24} color={color} />
     </Pressable>
   );
 };
