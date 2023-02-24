@@ -10,6 +10,7 @@ import {
   View,
 } from "react-native";
 import { RootStackParamList } from "../utils/navigation";
+import MealDetails from "./MealDetails";
 
 const MealItem = ({
   id,
@@ -45,11 +46,11 @@ const MealItem = ({
             <Image source={{ uri: imageUrl }} style={styles.image} />
             <Text style={styles.title}>{title}</Text>
           </View>
-          <View style={styles.details}>
-            <Text style={styles.detailItem}>{duration}m</Text>
-            <Text style={styles.detailItem}>{complexity.toUpperCase()}</Text>
-            <Text style={styles.detailItem}>{affordability.toUpperCase()}</Text>
-          </View>
+          <MealDetails
+            duration={duration}
+            complexity={complexity}
+            affordability={affordability}
+          />
         </View>
       </Pressable>
     </View>
