@@ -33,6 +33,7 @@ const MealsOverviewScreen = ({ route, navigation }: Props) => {
 
   function renderMealItem(itemData: ListRenderItemInfo<Meal>) {
     const mealItemProps = {
+      id: itemData.item.id,
       title: itemData.item.title,
       imageUrl: itemData.item.imageUrl,
       duration: itemData.item.duration,
